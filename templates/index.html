@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Studio | Create Your QR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h2>QR Studio</h2>
+        <p>Create. Scan. Connect.</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Create Your Own QR Code</h1>
+            <p>Generate QR codes for links and text in seconds.</p>
+        </section>
+
+        <section class="generator">
+
+            <div class="input-section">
+
+                <h2>QR Code Generator</h2>
+
+                <label for="qr-type">Choose QR Type</label>
+
+                <select id="qr-type">
+                    <option value="url">Website URL</option>
+                    <option value="text">Plain Text</option>
+                </select>
+
+                <label for="qr-input">Enter Your Content</label>
+
+                <textarea id="qr-input" placeholder="Enter your URL or text here..." rows="4"></textarea>
+
+                <button id="generate-btn">
+                    Generate QR Code
+                </button>
+
+            </div>
+
+            <div class="preview-section">
+
+                <h2>Your QR Code</h2>
+
+                <div id="qr-preview">
+                    <p>Your QR code will appear here.</p>
+                </div>
+
+                <button id="download-btn" disabled>
+                    Download PNG
+                </button>
+
+                <button id="reset-btn">
+                    Reset
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made with ❤️ using Python & Flask</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
